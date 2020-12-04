@@ -1,0 +1,24 @@
+Cel:             Wystawienie faktury
+Aktorzy:         Użytkownik, System
+Wyzwalacz:       Logowanie do systemu
+Warunek wstępny: Posiadanie konta w systemie
+-------------------------------------------
+Scenariusz głowny
+krok 01 - Użytkownik otwiera strone www systemu
+krok 02 - Użytkownik wprowadza poprawny login oraz haslo
+krok 03 - Użytkownik klika zaloguj
+krok 04 - System sprawdza login/haslo uzytkownika i autentykuje go.
+krok 05 - Użytkownik wybiera opcję dodaj firmę
+krok 06 - Użytkownik wypełnia dane klienta i zapisuje zmiany
+krok 07 - System informuje o poprawnym zapisaniu klienta
+krok 08 - Użytkownik wraca na strone główną
+krok 09 - Użytkownik wybiera wystaw fakturę
+krok 10 - Użytkownik wypełnia dane do faktury i zapisuje zmiany
+krok 11 - System informuje o poprawnym zapisaniu faktury
+-------------------------------------------
+Scenariusz alternatywny
+02.1 Użytkownik podaje zle dane do logowania
+06.1 Użytkownik podaje złe dane firmy
+07.1 System informuje o błędach w formularzu
+10.1 Użytkownik podaje złe dane do faktury
+07.1 System informuje o błędach w formularzu

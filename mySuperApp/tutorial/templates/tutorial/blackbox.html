@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="card border-success mb-3">
+                    <div class="card-header">KLASY RÓWNOWAŻNOŚCI</div>
+                    <div class="card-body text-success">
+                        <h5 class="card-title">Pole Przyjmuje wartości od 100 do 1000</h5>
+                        <form method="post">
+                        {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-describedby="button-addon2" name="button1" placeholder="Wpisz liczbę">
+                                <div class="input-group-append">
+                                    <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-1" id="button-1">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p>Wpisana wartość to: {{ button1 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-danger mb-3">
+                    <div class="card-header">KLASY RÓWNOWAŻNOŚCI</div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Pole Przyjmuje wartości od 100 do 1000</h5>
+                        <form method="post">
+                        {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-describedby="button-addon2" name="button2" placeholder="Wpisz liczbę">
+                                <div class="input-group-append">
+                                    <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-2" id="button-2">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p>Wpisana wartość to: {{ button2 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card border-success mb-3">
+                    <div class="card-header">ANALIZA WARTOŚCI BRZEGOWYCH</div>
+                    <div class="card-body text-success">
+                        <h5 class="card-title">Przy zakupie do 5 sztuk towaru cena nie ulega zmianie. Natomiast przy zakupie powyżej 5 sztuk przysługuje darmowa dostawa, ale jeśli zamówienie jest na co najmniej 50 sztuk, to klient dostaje dodatkowo 10% zniżki. Przy tym wszystkim istnieje warunek, że nie można zamówić więcej niż 99 sztuk towaru. Cena bazowa towaru to 10 PLN.</h5>
+                        <form method="post">
+                        {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-describedby="button-addon3" name="button3" placeholder="Wpisz ilość sztuk">
+                                <div class="input-group-append">
+                                    <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-3" id="button-3">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p>Cena towaru to: {{ button3 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-danger mb-3">
+                    <div class="card-header">ANALIZA WARTOŚCI BRZEGOWYCH</div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Przy zakupie do 5 sztuk towaru cena nie ulega zmianie. Natomiast przy zakupie powyżej 5 sztuk przysługuje darmowa dostawa, ale jeśli zamówienie jest na co najmniej 50 sztuk, to klient dostaje dodatkowo 10% zniżki. Przy tym wszystkim istnieje warunek, że nie można zamówić więcej niż 99 sztuk towaru. Cena bazowa towaru to 10 PLN.</h5>
+                        <form method="post">
+                        {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-describedby="button-addon4" name="button4" placeholder="Wpisz ilość sztuk">
+                                <div class="input-group-append">
+                                    <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-4" id="button-4">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p>Cena towaru to: {{ button4 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card border-success mb-3">
+                    <div class="card-header">TABLICA DECYZYJNA</div>
+                    <div class="card-body text-success">
+                        <h5 class="card-title">Jeżeli klient zapisze się do newslettera i otrzyma kupon będzie mógł go wykorzystać jednorazowo na zakup towarów objętych promocją</h5>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Warunki wejścia
+                        </button>
+                        <div class="collapse" id="collapseExample">
+                            <form method="post">
+                            {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Klient zapisał się na Newsletter</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="param1">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Klient dostał kupon za zapis do newslettera</label>
+                                    <select class="form-control" id="exampleFormControlSelect2" name="param2">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect3">Kupon jest aktywny</label>
+                                    <select class="form-control" id="exampleFormControlSelect3" name="param3">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect4">Produkty w koszyku spełniają warunki promocji</label>
+                                    <select class="form-control" id="exampleFormControlSelect4" name="param4">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-5" id="button-5">Submit</button>
+                            </form>
+                        </div>
+                        <p>Czy rabat powinien być naliczony?: {{ button5 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-danger mb-3">
+                    <div class="card-header">TABLICA DECYZYJNA</div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Jeżeli klient zapisze się do newslettera i otrzyma kupon będzie mógł go wykorzystać jednorazowo na zakup towarów objętych promocją</h5>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                            Warunki wejścia
+                        </button>
+                        <div class="collapse" id="collapseExample2">
+                            <form method="post">
+                            {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Klient zapisał się na Newsletter</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" name="param1">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Klient dostał kupon za zapis do newslettera</label>
+                                    <select class="form-control" id="exampleFormControlSelect2" name="param2">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect3">Kupon jest aktywny</label>
+                                    <select class="form-control" id="exampleFormControlSelect3" name="param3">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect4">Produkty w koszyku spełniają warunki promocji</label>
+                                    <select class="form-control" id="exampleFormControlSelect4" name="param4">
+                                        <option>YES</option>
+                                        <option>NO</option>
+                                    </select>
+                                </div>
+                                <button type="Submit" class="btn btn-outline-secondary" name="Submit" value="button-6" id="button-6">Submit</button>
+                            </form>
+                        </div>
+                        <p>Czy rabat powinien być naliczony?: {{ button6 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card border-success mb-3">
+                    <div class="card-header">PRZEJŚCIA POMIĘDZY STANAMI</div>
+                    <div class="card-body text-success">
+                        <p class="card-title">W przykładowym systemie istnieje 6 stanów.</p>
+                        <p class="card-title">Stan początkowy (Home) prowadzi do stanu 1 który prowadzi do stanów 2 lub 3. </p>
+                        <p class="card-title">Stan 2 prowadzi do stanu 5, natomiast stan 3 do stanu 4. Stan 4 prowadzi do stanu 5.</p>
+                        <p class="card-title">Dodatkowo z każdego stanu powinna być możliwość przejścia do stanu początkowego (home) poza stanem 3.</p>
+                        <a class="btn btn-primary" href="/tutorial/stan1" role="button">Start</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-danger mb-3">
+                    <div class="card-header">PRZEJŚCIA POMIĘDZY STANAMI</div>
+                    <div class="card-body text-danger">
+                        <p class="card-title">W przykładowym systemie istnieje 6 stanów.</p>
+                        <p class="card-title">Stan początkowy (Home) prowadzi do stanu 1 który prowadzi do stanów 2 lub 3. </p>
+                        <p class="card-title">Stan 2 prowadzi do stanu 5, natomiast stan 3 do stanu 4. Stan 4 prowadzi do stanu 5.</p>
+                        <p class="card-title">Dodatkowo z każdego stanu powinna być możliwość przejścia do stanu początkowego (home) poza stanem 3.</p>
+                        <a class="btn btn-primary" href="/tutorial/stan1?var1=b" role="button">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">PRZYPADKI UŻYCIA</div>
+                    <div class="card-body">
+                        <p>Użytkownik po po poprawnym zalogowaniu powinien mieć możliwość wystawienia faktury dla klienta. Jeżel klient nie istnieje powinna być możlwość dodania nowego klienta.</p>
+                        <p> Dane testowe do systemu --> login: admin@admin pass: admin 
+                        <p><a class="btn btn-primary" href="/tutorial/use_case_login" role="button">GO</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

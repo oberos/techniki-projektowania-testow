@@ -1,0 +1,11 @@
+klasa 1: od - nieskonczonosc do 0
+klasa 2: 1 - 5
+klasa 3: 6 - 49
+klasa 4: 50 - 99
+klasa 5: 100 do + nieskonczonosc
+-----------------------------------
+klasa 1:  ; -1 0 1
+klasa 2: 0 1 2 ; 4 5 6
+klasa 3: 5 6 7 ; 48 49 50
+klasa 4: 49 50 51 ; 98 99 100
+klasa 5: 99 100 101 ; 

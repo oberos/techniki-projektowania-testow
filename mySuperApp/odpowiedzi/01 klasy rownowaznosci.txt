@@ -1,0 +1,11 @@
+klasa 1: -∞ 99
+klasa 2: 100 1000
+klasa 3: 1000 + ∞
+- klasy rownowaznosci -
+klasa 1: 50, 60, 71
+klasa 2: 110, 325, 666
+klasa 3: 1500, 12030, 51651513546516
+- wartosci brzegowe -
+klasa 1: ; 98 99 100
+klasa 2: 99 100 101 : 999 1000 1001
+klasa 3: 999 1000 1001 ;
