@@ -247,6 +247,14 @@ def use_case_add_company(request):
         return render(request, 'tutorial/use_case_add_company.html', context)
 
 
-def whitebox(request):
-    context = {'test1': 'Site for cft/monitoring'}
-    return render(request, 'tutorial/whitebox.html', context)
+def web_apps(request):
+    if request.method == 'POST':
+        context = {'data': ''}
+        if request.POST.get('Submit') == 'admin':
+            print(request)
+            context['data'] = 'Admin credentials: Admin/admin'
+            print(context)
+        return render(request, 'tutorial/web_apps.html', context)
+    else:
+        context = {'data': ''}
+        return render(request, 'tutorial/web_apps.html', context)

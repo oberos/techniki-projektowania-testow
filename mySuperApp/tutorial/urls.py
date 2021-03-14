@@ -14,5 +14,5 @@ urlpatterns = [
     path('use_case_home', views.use_case_home, name='use_case_home'),
     path('use_case_add_invoice', views.use_case_add_invoice, name='use_case_add_invoice'),
     path('use_case_add_company', views.use_case_add_company, name='use_case_add_company'),
-    path('whitebox', views.whitebox, name='whitebox'),
+    path('web_apps', views.web_apps, name='web_apps'),
 ]
