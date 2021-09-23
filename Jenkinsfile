@@ -1,12 +1,9 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('build') {
       steps {
-        node(label: 'master') {
-          git(url: 'https://github.com/oberos/techniki-projektowania-testow.git', branch: 'main')
-        }
-
+        git(url: 'https://github.com/oberos/techniki-projektowania-testow.git', branch: 'main')
       }
     }
 
