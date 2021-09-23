@@ -16,6 +16,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'echo \'This is deploy test\''
+        sh 'echo \'this is branch test\''
       }
     }
 
