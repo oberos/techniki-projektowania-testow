@@ -13,9 +13,24 @@ pipeline {
       }
     }
 
-    stage('deploy') {
+    stage('deploy - prod') {
+      when {
+        branch 'master' 
+      }
       steps {
-        sh 'echo \'This is deploy test\''
+        sh 'echo \'This is deploy stage\''
+        sh 'echo \'this is branch prod\''
+      }
+    }
+    stage('deploy - test') {
+      when { 
+        not { 
+          branch 'master' 
+        } 
+      }
+      steps {
+        sh 'echo \'This is deploy stage\''
+        sh 'echo \'this is branch test\''
       }
     }
 
