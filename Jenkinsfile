@@ -15,7 +15,7 @@ pipeline {
 
     stage('deploy - prod') {
       when {
-        branch 'master' 
+        branch 'main' 
       }
       steps {
         sh 'echo \'This is deploy stage\''
@@ -25,7 +25,7 @@ pipeline {
     stage('deploy - test') {
       when { 
         not { 
-          branch 'master' 
+          branch 'main' 
         } 
       }
       steps {
