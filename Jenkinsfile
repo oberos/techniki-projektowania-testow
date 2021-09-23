@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        git(url: 'https://github.com/oberos/techniki-projektowania-testow.git', branch: 'main')
+        node(label: 'master') {
+          git(url: 'https://github.com/oberos/techniki-projektowania-testow.git', branch: 'main')
+        }
+
       }
     }
 
